@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
-import { Flight } from 'src/app/shared';
+import { Flight } from '../../shared';
+
 
 
 @Component({
@@ -8,7 +9,8 @@ import { Flight } from 'src/app/shared';
   styleUrls: ['./flight-detail.component.css']
 })
 export class FlightDetailComponent implements OnInit {
-  @Input() flight:Flight;
+  @Input() flight:Flight
+  ;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Worker } from 'src/app/shared';
+import { Worker } from '../../shared';
 
 
 @Component({

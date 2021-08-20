@@ -1,7 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Flight } from 'src/app/shared';
-import { WorkersService } from 'src/app/workers.service';
+import { Flight } from '../../shared';
+import { WorkersService } from '../../workers.service';
 
 @Component({
   selector: 'app-worker-flights-detail',
