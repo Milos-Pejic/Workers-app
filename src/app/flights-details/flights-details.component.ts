@@ -13,8 +13,7 @@ export class FlightsDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.curentFlight=null
+      this.curentFlight=null;
     });
-  }
-
+  };
 }
