@@ -1,0 +1,7 @@
+.table{
+    margin-top: 100px;
+    padding: 5px;
+}
+.table tbody tr td{
+    padding: 10px;
+}

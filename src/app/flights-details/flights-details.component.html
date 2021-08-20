@@ -1,0 +1,14 @@
+<div class="flights">
+    <div class="one">
+        <app-worker-flights-detail (selectedData)="curentFlight=$event"></app-worker-flights-detail>
+    </div>
+    <div class="two">
+        <app-flight-detail
+        *ngIf="curentFlight; else infoText"
+        [flight]="curentFlight"
+        ></app-flight-detail>
+        <ng-template #infoText>
+            <p class="infoText">Please Select a Flight</p>
+        </ng-template>
+    </div>
+</div>

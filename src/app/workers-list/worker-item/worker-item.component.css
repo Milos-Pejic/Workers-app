@@ -1,0 +1,16 @@
+ul {
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+li {
+    padding: 0px 3px 0px 5px;
+    cursor: pointer;
+}
+a {
+    margin-bottom: 0px;
+}
+
+.active {
+    background-color: lightgrey;
+    border: 1px solid black;
+}

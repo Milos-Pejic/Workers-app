@@ -1,0 +1,26 @@
+<hr>
+<table class="table">
+    <thead>
+        <tr>
+            <td scope="col">Flight Number</td>
+            <td scope="col">Origin</td>
+            <td scope="col">Origin Date</td>
+            <td scope="col">Destination</td>
+            <td scope="col">Destination Date</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr 
+        *ngFor="let flight of flightsOfWorker; let i = index" 
+        routerLinkActive="active"
+        (click)="onSelected(flight,i)"
+        [class.active]="i == selectedRow"
+        >
+            <td>{{flight.num}}</td>
+            <td>{{flight.from}}</td>
+            <td>{{flight.from_date}}</td>
+            <td>{{flight.to}}</td>
+            <td>{{flight.to_date}}</td>
+        </tr>
+    </tbody>
+</table>
