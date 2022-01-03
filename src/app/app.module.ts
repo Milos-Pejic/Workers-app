@@ -11,6 +11,7 @@ import { WorkerFlightsDetailComponent } from './flights-details/worker-flights-d
 import { FlightDetailComponent } from './flights-details/flight-detail/flight-detail.component';
 import { MinutesToHoursPipe } from './pipe/minutes-to-hours.pipe';
 import { WorkersStartComponent } from './workers-start/workers-start.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { WorkersStartComponent } from './workers-start/workers-start.component';
     FlightDetailComponent,
     MinutesToHoursPipe,
     WorkersStartComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

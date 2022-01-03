@@ -11,10 +11,9 @@ import { WorkersService } from '../../workers.service';
 export class WorkerFlightsDetailComponent implements OnInit {
   workerId: number;
   flightsOfWorker: Flight[] = [];
-  selectedFlight:Flight;
+  selectedFlight: Flight;
   selectedRow: Number;
   interval: any;
-  @Output() selectedData= new EventEmitter<Flight>()
   constructor(
     private workersService: WorkersService,
     private activatedRoute: ActivatedRoute
@@ -22,24 +21,23 @@ export class WorkerFlightsDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.selectedRow=null;
+      this.selectedRow = null;
       this.workerId = params['id'];
       this.getFlights();
       if(this.interval) clearInterval(this.interval);
-      this.interval= setInterval(()=>{
+      this.interval = setInterval(()=>{
         this.getFlights();
-      },60000);
+      }, 60000);
     });
   };
   onSelected(data: Flight, index:number){
     this.selectedFlight = data;
-    this.selectedData.emit(this.selectedFlight);
-    this.selectedRow=index;
+    this.workersService.selectedFlight.next(data);
+    this.selectedRow = index;
   };
   getFlights():void{
     this.workersService.getFlight(this.workerId).subscribe((resp: Flight[]) => {
       this.flightsOfWorker = resp;
-      console.log(this.flightsOfWorker);
     });
   };
 };

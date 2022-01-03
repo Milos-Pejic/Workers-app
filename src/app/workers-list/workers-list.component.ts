@@ -13,8 +13,7 @@ export class WorkersListComponent implements OnInit {
 
   ngOnInit(): void {
     this.workersService.getWorkers().subscribe((resp:Worker[])=>{
-      console.log(resp)
-      this.workers=resp;
+      this.workers = resp;
     });
   };
 };

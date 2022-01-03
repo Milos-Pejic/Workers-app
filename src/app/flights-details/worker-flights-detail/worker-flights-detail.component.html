@@ -12,7 +12,7 @@
     <tbody>
         <tr 
         *ngFor="let flight of flightsOfWorker; let i = index" 
-        routerLinkActive="active"
+        routerLinkActive = "active"
         (click)="onSelected(flight,i)"
         [class.active]="i == selectedRow"
         >
